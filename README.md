@@ -1,2 +1,2 @@
 # DemoRepo
-1. demonstration of git
+Contains my all Handson of Kelltontech Training
