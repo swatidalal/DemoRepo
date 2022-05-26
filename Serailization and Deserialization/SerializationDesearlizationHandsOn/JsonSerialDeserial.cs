@@ -104,36 +104,42 @@ namespace SerializationDesearlizationHandsOn
                 list.Add(ebillObj);
             }
 
+
+            FileStream fileStream = new FileStream(@"C:\Users\LENOVO\Desktop\Training\SerialDeserial\MyDataInXmlFormat.txt", FileMode.Append, FileAccess.Write);
+
             XmlSerializer serializer = new XmlSerializer(typeof(List<EBill>));
 
-            FileStream fileStream = new FileStream(@"C:\Users\LENOVO\Desktop\Training\SerialDeserial\MyDataInXmlFormat.txt", FileMode.Create);
-            StreamWriter streamWriter = new StreamWriter(fileStream);
-            XmlWriter xmlWriter = new XmlTextWriter(streamWriter);
 
-            serializer.Serialize(xmlWriter, list);
+            serializer.Serialize(fileStream, list);
+            fileStream.Close();
 
-            xmlWriter.Close();
-            streamWriter.Close();
+
         }
 
         public void DeSerializeFromXmlFormatToListEBill()
         {
-            List<EBill> list = new List<EBill>();
 
-            XmlSerializer ser = new XmlSerializer(typeof(List<EBill>));
+            FileStream fileStreamobjForDe = new FileStream(@"C:\Users\LENOVO\Desktop\Training\SerialDeserial\MyDataInXmlFormat.txt", FileMode.Open);
 
-            using (XmlReader reader = XmlReader.Create(@"C:\Users\LENOVO\Desktop\Training\SerialDeserial\MyDataInXmlFormat.txt"))
-            {
-                list = (List<EBill>)ser.Deserialize(reader);
-            }
 
-            foreach (EBill ebill in list)
+            XmlSerializer Dserializer = new XmlSerializer(typeof(List<EBill>));
+
+            List<EBill> newList = (List<EBill>)Dserializer.Deserialize(fileStreamobjForDe);
+
+            //using (XmlReader reader = XmlReader.(@"C:\Users\LENOVO\Desktop\Training\SerialDeserial\MyDataInXmlFormat.txt"))
+            //{
+            //    list = (List<EBill>)ser.Deserialize(reader);
+            //}
+
+            foreach (EBill ebill in newList)
             {
                 Console.WriteLine(ebill.CustomerId + " " + ebill.CustomerName + " " + ebill.NoOfUnits + " " + ebill.Total);
             }
+
         }
+
+
+
     }
-
-
 
 }
