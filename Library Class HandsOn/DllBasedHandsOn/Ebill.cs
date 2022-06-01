@@ -22,7 +22,7 @@ namespace DllBasedHandsOn
         
         public void AddDetails()
         {
-
+            Console.WriteLine("Customer details");
             listObj.Add(new EBill
             {
                 CustomerId = 1001,
@@ -136,6 +136,14 @@ namespace DllBasedHandsOn
                 Total = NoOfUnits * 20
 
             });
+            for (int i = 0; i < listObj.Count; i++)
+            {
+                //if (iD == listObj[i].CustomerId)
+                //{
+                    Console.WriteLine(listObj[i].NoOfUnits + " " + listObj[i].Total);
+                //    break;
+                //}
+            }
         }
 
         public void ShowCustomerDetails(int iD)
