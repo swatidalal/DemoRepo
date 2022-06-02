@@ -7,8 +7,7 @@ namespace XunitDemo
 {
     public class UnitTest1
     {
-        
-        
+             
             //Testing interfaces
             [Fact]
             public void CalculatorAddFunctionTest()
@@ -20,6 +19,7 @@ namespace XunitDemo
                 calculator.Setup(obj => obj.Add(2, 2)).Returns(4);//setup, fakedata, tempdata
                 Assert.Equal(4, calculator.Object.Add(2, 2));
             }
+        
             [Fact]
             public void CalculatorSubstractFunctionTest()
             {
