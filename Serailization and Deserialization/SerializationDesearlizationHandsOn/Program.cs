@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Xml;
+using Newtonsoft.Json;
 
 namespace SerializationDesearlizationHandsOn
 {
@@ -16,13 +17,13 @@ namespace SerializationDesearlizationHandsOn
         static void Main(string[] args)
         {
 
-            XmlSerialDeserial xmlFormatSerialization = new XmlSerialDeserial();
-            xmlFormatSerialization.SerializeInXmlFormat();
+            //XmlSerialDeserial xmlFormatSerialization = new XmlSerialDeserial();
+            //xmlFormatSerialization.SerializeInXmlFormat();
             //xmlFormatSerialization.DeSerializeFromXmlFormatToListEBill();
 
-            //JsonSerialDeserial jsonFormatSerialization = new JsonSerialDeserial();
-            //jsonFormatSerialization.SerializeInJsonFromat();
-            //jsonFormatSerialization.DeSerializeFromJsonFromatToListEBill();
+            JsonSerialDeserial jsonFormatSerialization = new JsonSerialDeserial();
+             string result=jsonFormatSerialization.SerializeInJsonFromat();
+            jsonFormatSerialization.DeSerializeFromJsonFromatToListEBill(result);
 
             //BfSerialDeserial serialization = new BfSerialDeserial();
             //serialization.Serialize();
