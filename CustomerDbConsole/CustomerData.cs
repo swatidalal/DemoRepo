@@ -98,11 +98,11 @@ namespace CustomerDbConsole
             
         }
 
-        public DataTable SelectCustomersById()
+        public DataTable SelectCustomersById(int CustId)
         {
 
             SqlConnection sqlConnection = new SqlConnection(sqlConnectionStr);
-            SqlCommand cmd = new SqlCommand("SELECT * from Customer", sqlConnection);
+            SqlCommand cmd = new SqlCommand("SELECT * from Customer where CustId = " +CustId+ " ", sqlConnection);
             sqlConnection.Open();//connection state is open
             SqlDataReader dataReader = cmd.ExecuteReader();//execute select statment
             DataTable dataTable = new DataTable();

@@ -62,6 +62,9 @@ namespace CustomerDbConsole
 
 
 
+
+
+
         public string DeleteAccount(int AccNo)
         {
             SqlConnection sqlConnection = new SqlConnection(sqlConnectionStr);//connection establishment

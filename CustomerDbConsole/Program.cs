@@ -62,12 +62,12 @@ namespace CustomerDbConsole
                             break;
                         case 5:
                             Console.WriteLine("Enter The Customer ID To See Its Details : ");
-                            int SearchID = Convert.ToInt32(Console.ReadLine());
-                            dt = customerData.SelectCustomersById();
+                            int CustId = Convert.ToInt32(Console.ReadLine());
+                            dt = customerData.SelectCustomersById(CustId);
                             for (int i = 0; i < dt.Rows.Count; i++)
                             {
                                 // int ID = (int)dt.Rows[i][0];
-                                if ((int)dt.Rows[i][0] == SearchID)
+                                if ((int)dt.Rows[i][0] == CustId)
                                 {
                                     {
                                         for (int j = 0; j < dt.Columns.Count; j++)
@@ -79,6 +79,7 @@ namespace CustomerDbConsole
                                 }
                                 Console.WriteLine();
                             }
+                            Console.ReadLine ();
                             break;
 
                     }
@@ -128,7 +129,7 @@ namespace CustomerDbConsole
                             Console.ReadLine();
                             break;
                         case "e":
-                            Console.WriteLine("Enter The Customer ID To See Its Details : ");
+                            Console.WriteLine("Enter The Employee ID To See Its Details : ");
                             int SearchID = Convert.ToInt32(Console.ReadLine());
                             dt = employeeData.SelectEmployeeById();
                             for (int i = 0; i < dt.Rows.Count; i++)
