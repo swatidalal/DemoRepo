@@ -62,10 +62,10 @@ namespace CustomerDbConsole
 
 
 
-        public string DeleteAccount(int EmpId)
+        public string DeleteAccount(int AccNo)
         {
             SqlConnection sqlConnection = new SqlConnection(sqlConnectionStr);//connection establishment
-            SqlCommand cmd = new SqlCommand("delete from Employee where EmpId=" + EmpId, sqlConnection);
+            SqlCommand cmd = new SqlCommand("delete from Employee where AccNo=" + AccNo, sqlConnection);
             sqlConnection.Open();//connection state is open
             int result = cmd.ExecuteNonQuery();//execute my sql commands 1
             sqlConnection.Close(); //connection state is close
@@ -79,7 +79,7 @@ namespace CustomerDbConsole
         {
             SqlConnection sqlConnection = new SqlConnection(sqlConnectionStr);//connection establishment
             string db = sqlConnection.Database;
-            SqlCommand cmd = new SqlCommand("select * from Employee", sqlConnection);
+            SqlCommand cmd = new SqlCommand("select * from Account", sqlConnection);
             sqlConnection.Open();//connection state is open
             SqlDataReader dataReader = cmd.ExecuteReader();//execute select statment
             DataTable dataTable = new DataTable();
@@ -95,7 +95,7 @@ namespace CustomerDbConsole
         {
 
             SqlConnection sqlConnection = new SqlConnection(sqlConnectionStr);
-            SqlCommand cmd = new SqlCommand("SELECT * from Employee", sqlConnection);
+            SqlCommand cmd = new SqlCommand("SELECT * from Account", sqlConnection);
             sqlConnection.Open();//connection state is open
             SqlDataReader dataReader = cmd.ExecuteReader();//execute select statment
             DataTable dataTable = new DataTable();
