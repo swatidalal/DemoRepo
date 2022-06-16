@@ -13,35 +13,6 @@ namespace EventManagementSystem
 
         public static string sqlConnectionStr = @"Data Source=SWATI;Initial Catalog=EventManagement;Integrated Security=True";
 
-        public void CustomerPortal()
-        {
-            Console.WriteLine("---------------WELCOME TO CUSTOMER MUDULE---------------");
-            Console.WriteLine("Customer can book a event accordingly.");
-            Console.WriteLine();
-        Customer:
-            Console.WriteLine("Enter 0 to see all events management available currently.");
-            Console.WriteLine("Enter 1 to to book a event");
-            Console.WriteLine("Enter 2 to logOut");
-            int i = Convert.ToInt32(Console.ReadLine());
-            if (i == 0)
-            {
-                Customer customer = new Customer();
-                customer.DisplayAllEvents();
-                Console.WriteLine();
-                goto Customer;
-            }
-            else if (i == 1)
-            {
-                Customer customer = new Customer();
-                Console.WriteLine(customer.BookEvent());
-                Console.WriteLine();
-                goto Customer;
-            }
-            else
-            {
-                return;
-            }
-        }
         public DataTable ShowFoodItems()
         {
             #region disconnected-mode
@@ -130,7 +101,7 @@ namespace EventManagementSystem
                 if (i == 0)
                     Console.WriteLine($"Enter {i + 1}st food id from the above table.");
                 else if (i == 1)
-                    Console.WriteLine($"Enter {i + 1}ed food id from the above table.");
+                    Console.WriteLine($"Enter {i + 1}nd food id from the above table.");
                 else if (i == 2)
                     Console.WriteLine($"Enter {i + 1}rd food id from the above table.");
                 else
@@ -192,14 +163,14 @@ namespace EventManagementSystem
             //final ammount
             total = total * totalNoOfPerson + decoreCost;
 
-            //insert into Admin Table
+            //insert into Customer Table
 
             #region disconnected-mode
             SqlConnection sqlConnection = new SqlConnection(sqlConnectionStr);//connection stablishmentg
             SqlDataAdapter sda = new SqlDataAdapter("insert into Customer values('" + name + "','" + city + "'," + mobile + ",'" + eventName + "','" + itemsIdStringConcate + "'," + DecorationId + "," + totalNoOfPerson + "," + total + ")", sqlConnection);
             DataTable dt1 = new DataTable();
             sda.Fill(dt1);
-            return $"Your approximate Pay Amount for the party is: {total }.Till now Wait for approval!";
+            return $"Your approximate Pay Amount for the party is: {total }!";
             #endregion
 
         }

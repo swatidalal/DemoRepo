@@ -14,16 +14,20 @@ namespace EventManagementSystem
         {
 
             DataTable dt = new DataTable();
+
+            Console.WriteLine("********************************** Welcome to EVENT MANAGEMENT SYSTEM*******************************************");
             Console.WriteLine("Please Choose Profile to Continue :\n");
             Console.WriteLine("\t\tPress 1 For Super Admin");
             Console.WriteLine("\t\tPress 2 For Admin");
             Console.WriteLine("\t\tPress 3 For Customer");
-
+            
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
                 case 1:
                     SuperAdmin superAdmin = new SuperAdmin();
+
+                    Console.WriteLine("************************Welcome to SuperAdmin Portal**************************************");
                     Console.WriteLine("Please Select one of the Options :\n");
                     Console.WriteLine("\t\tPress 1 to Insert Admin.");
                     Console.WriteLine("\t\tPress 2 to Update Admin.");
@@ -87,14 +91,21 @@ namespace EventManagementSystem
 
                     break;
 
+
+               
+
                 case 2:
 
                     Admin admin = new Admin();
+
+                    Admin:
                     Console.WriteLine("***********************WeCome to Admin Portal*******************************");
                     Console.WriteLine("Press 1 for Adding Event");
                     Console.WriteLine("Press 2 for Adding FoodItem");
                     Console.WriteLine("Press 3 for Adding Decoration Type ");
                     Console.WriteLine("Press 4 for Displaying all Bookings");
+
+                    
 
                     int choice2 = Convert.ToInt32(Console.ReadLine());
                     switch (choice2)
@@ -118,9 +129,10 @@ namespace EventManagementSystem
 
                     }
 
-
+                    goto Admin;
 
                     break;
+                   
 
 
 
@@ -128,14 +140,34 @@ namespace EventManagementSystem
 
 
                     Customer customer = new Customer();
-                    customer.CustomerPortal();
+                    Console.WriteLine("*****************************Welcome to Customer Portal***************************************");
+                    Console.WriteLine("Press 1 to Show All Events");
+                    Console.WriteLine("Press 2 for Booking Event");
+                   Customer:
+                    int choice3 = Convert.ToInt32(Console.ReadLine());
+                    switch (choice3)
+                    {
+                        case 1:
+                            customer.DisplayAllEvents();
+                            Console.WriteLine();
+                            goto Customer;
+                            break;
+
+                        case 2:
+                            Console.WriteLine(customer.BookEvent());
+                            Console.WriteLine();
+                            goto Customer;
+                            break;
+
+                    }
+
                     break;
 
 
 
             }
 
-            
+            Console.ReadLine();
 
 
         }

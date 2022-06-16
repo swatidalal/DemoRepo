@@ -12,6 +12,7 @@ namespace EventManagementSystem
     {
 
         public static string sqlConnectionStr = @"Data Source =SWATI; Initial Catalog=EventManagement;Integrated Security=True";
+        
 
         public string AddEvent()
         {
@@ -89,7 +90,7 @@ namespace EventManagementSystem
         {
             Admin obj = new Admin();
             DataTable dt = obj.ShowAllBookings();
-            Console.WriteLine("CId\tCName\tCAddrs  Mobile\tEventName\tFoodIds\tDId\tTPerson\tEventCost");
+            Console.WriteLine("CId\tCName\t\tCAddrs \t Mobile\tEventName\tFoodIds\tDId\tTPerson\tEventCost");
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 for (int j = 0; j < dt.Columns.Count; j++)
@@ -98,12 +99,13 @@ namespace EventManagementSystem
                 }
                 Console.WriteLine();
             }
+            Console.ReadLine();
         }
         public DataTable ShowAllBookings()
         {
             #region disconnected-mode
             SqlConnection sqlConnection = new SqlConnection(sqlConnectionStr);//connection stablishmentg
-            SqlDataAdapter sda = new SqlDataAdapter("select* from CustomerTable ", sqlConnection);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Customer ", sqlConnection);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
