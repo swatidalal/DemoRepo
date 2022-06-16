@@ -19,8 +19,8 @@ namespace EventManagementSystem
             Console.WriteLine("\t\tPress 2 For Admin");
             Console.WriteLine("\t\tPress 3 For Customer");
 
-            int choice1 = Convert.ToInt32(Console.ReadLine());
-            switch (choice1)
+            int choice = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
             {
                 case 1:
                     SuperAdmin superAdmin = new SuperAdmin();
@@ -31,8 +31,8 @@ namespace EventManagementSystem
                     Console.WriteLine("\t\tPress 4 to Show All Admin Table Data.");
                     Console.WriteLine("\t\tPress 5 to Show a Particular Admin Data.");
 
-                    int choice2 = Convert.ToInt32(Console.ReadLine());
-                    switch (choice2)
+                    int choice1 = Convert.ToInt32(Console.ReadLine());
+                    switch (choice1)
                     {
                         case 1:
                             string result = superAdmin.InsertAdmin();
@@ -87,8 +87,57 @@ namespace EventManagementSystem
 
                     break;
 
+                case 2:
+
+                    Admin admin = new Admin();
+                    Console.WriteLine("***********************WeCome to Admin Portal*******************************");
+                    Console.WriteLine("Press 1 for Adding Event");
+                    Console.WriteLine("Press 2 for Adding FoodItem");
+                    Console.WriteLine("Press 3 for Adding Decoration Type ");
+                    Console.WriteLine("Press 4 for Displaying all Bookings");
+
+                    int choice2 = Convert.ToInt32(Console.ReadLine());
+                    switch (choice2)
+                    {
+                        case 1:
+                            string result = admin.AddEvent();
+                            Console.WriteLine(result);
+                            break;
+                        case 2:
+                            result = admin.AddFoodItems();
+                            Console.WriteLine(result);
+                            break;
+                        case 3:
+                            result = admin.AddDecoration();
+                            Console.WriteLine(result);
+                            break;
+                        case 4:
+                            admin.DisplayAllBookings();
+                            Console.WriteLine();
+                            break;
+
+                    }
+
+
+
+                    break;
+
+
+
+                case 3:
+
+
+                    Customer customer = new Customer();
+                    customer.CustomerPortal();
+                    break;
+
+
 
             }
+
+            
+
+
         }
     }
 }
