@@ -14,12 +14,25 @@ namespace EntityFrameWork.Data.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Name = table.Column<string>(type: "Varchar(50)", nullable: true),
+                    Address = table.Column<string>(type: "Varchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Employees", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Teachers",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "Varchar(50)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Teachers", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -44,6 +57,32 @@ namespace EntityFrameWork.Data.Migrations
                         principalColumn: "ID");
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ClassRooms",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "Varchar(50)", nullable: true),
+                    TeacherID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ClassRooms", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_ClassRooms_Teachers_TeacherID",
+                        column: x => x.TeacherID,
+                        principalTable: "Teachers",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ClassRooms_TeacherID",
+                table: "ClassRooms",
+                column: "TeacherID",
+                unique: true);
+
             migrationBuilder.CreateIndex(
                 name: "IX_EmployeeEducations_EmployeeID",
                 table: "EmployeeEducations",
@@ -53,7 +92,13 @@ namespace EntityFrameWork.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "ClassRooms");
+
+            migrationBuilder.DropTable(
                 name: "EmployeeEducations");
+
+            migrationBuilder.DropTable(
+                name: "Teachers");
 
             migrationBuilder.DropTable(
                 name: "Employees");

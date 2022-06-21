@@ -1,4 +1,6 @@
-﻿using EntityFrameWork.Data;
+﻿using EntityFramework.Data;
+using EntityFramework.Data.Entities;
+using EntityFrameWork.Data;
 using EntityFrameWork.Data.Entities;
 
 public class program
@@ -42,9 +44,9 @@ public class program
         //PrintAllEmployeeEducations();
 
 
-        Console.WriteLine("Retrieving Employee Education details for ID 2");
-        var employeeEducation = obj.GetEmplpoyeeEducationById(2);
-        Console.WriteLine($"Course of  ID 2 is {employeeEducation.CourseName}");
+        //Console.WriteLine("Retrieving Employee Education details for ID 2");
+        //var employeeEducation = obj.GetEmplpoyeeEducationById(2);
+        //Console.WriteLine($"Course of  ID 2 is {employeeEducation.CourseName}");
 
         //Console.WriteLine("Deleting Employee Education details for ID 3");
         //obj.DeleteEmpEdu(3);
@@ -55,7 +57,66 @@ public class program
 
 
         #endregion
+
+        //List < EmployeeEducation > educationList = new List<EmployeeEducation>();
+        //educationList.Add(new EmployeeEducation { CourseName = "BBA", UniversityName = "Manipal", MarksPercentage = 80, PassingYear = 2020 });
+        //educationList.Add(new EmployeeEducation { CourseName = "MBA", UniversityName = "Manipal", MarksPercentage = 75, PassingYear = 2022 });
+
+        //CrudEducationDetails obj2 = new CrudEducationDetails(); 
+        //obj2.InsertEducation(educationList);
+
+        //SaveEmployeeAndEducation();
+        SaveClassRoomAndTeacher();
+
+
+
+        }
+
+    private static void SaveEmployeeAndEducation()
+    {
+        CrudEducationDetails obj = new CrudEducationDetails();
+
+        //var employee = new Employee { Name = "Swati", Address = "Delhi" };
+        //List<EmployeeEducation> educationList = new List<EmployeeEducation>();
+        //educationList.Add(new EmployeeEducation
+        //{
+        //    CourseName = "BCA",
+        //    UniversityName = "Manipal",
+        //    MarksPercentage = 80,
+        //    PassingYear = 2020,
+        //    Employee = employee
+        //});
+        //educationList.Add(new EmployeeEducation
+        //{
+        //    CourseName = "MCA",
+        //    UniversityName = "Manipal",
+        //    MarksPercentage = 75,
+        //    PassingYear = 2022,
+        //    Employee = employee
+        //});
+
+        //obj.InsertEducation(educationList);
+
+        //List<EmployeeEducation> educationList = new List<EmployeeEducation>();
+        //educationList.Add(new EmployeeEducation { CourseName = "BBA", UniversityName = "Manipal", MarksPercentage = 80, PassingYear = 2020 });
+        //educationList.Add(new EmployeeEducation { CourseName = "MBA", UniversityName = "Manipal", MarksPercentage = 75, PassingYear = 2022 });
+
+        //obj.InsertEmployeeAndEducation(new Employee { Name = "Suman", Address = "Haryana" }, educationList);
+
+        //List<EmployeeEducation> educationList = new List<EmployeeEducation>();
+        //educationList.Add(new EmployeeEducation { CourseName = "BCA", UniversityName = "Manipal", MarksPercentage = 80, PassingYear = 2020 });
+        //educationList.Add(new EmployeeEducation { CourseName = "Mtech", UniversityName = "Manipal", MarksPercentage = 75, PassingYear = 2022 });
+
+        //obj.InsertEducationofExistingEmployee(1, educationList);
+
+        //obj.PrintEmployeeAndEducation(2);
+
+
+        Console.WriteLine("Done !!!");
+        Console.ReadLine();
     }
+
+
 
     static void PrintAllEmployees()
     {
@@ -78,6 +139,21 @@ public class program
         }
 
     }
+
+    private static void SaveClassRoomAndTeacher()
+    {
+        CRUDClassRoomAndTeacher obj = new CRUDClassRoomAndTeacher();
+
+        obj.InsertTeacher(new Teacher { Name = "SWati" });
+        obj.InsertClassRoom(new ClassRoom { Name = "Computer Science" });
+
+        //obj.InsertClassRoomAndTeacher(new ClassRoom { Name = "Computer Science" }, new Teacher { Name = "Utkarsh" });
+
+
+        Console.WriteLine("Done !!!");
+        Console.ReadLine();
+    }
+
 
 
 }

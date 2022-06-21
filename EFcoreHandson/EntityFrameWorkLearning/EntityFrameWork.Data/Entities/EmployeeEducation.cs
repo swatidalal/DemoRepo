@@ -25,6 +25,6 @@ namespace EntityFrameWork.Data.Entities
 
         public int MarksPercentage { get; set; }
 
-
+        public Employee Employee { get; set; }
     }
 }

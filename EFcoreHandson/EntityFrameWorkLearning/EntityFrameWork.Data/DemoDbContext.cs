@@ -1,4 +1,5 @@
-﻿using EntityFrameWork.Data.Entities;
+﻿using EntityFramework.Data.Entities;
+using EntityFrameWork.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,11 @@ namespace EntityFrameWork.Data
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeEducation> EmployeeEducations { get; set; }
+
+        public DbSet<ClassRoom> ClassRooms { get; set; }
+
+        public DbSet<Teacher> Teachers { get; set; }
+
 
         public DemoDbContext()
         {
