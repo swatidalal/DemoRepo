@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFcoreOrderAssignmentDll", "EFcoreOrderAssignmentDll\EFcoreOrderAssignmentDll.csproj", "{16422A99-5AE0-48D7-AB4C-91D8A363A033}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFcoreOrderAssignmentDll", "EFcoreOrderAssignmentDll\EFcoreOrderAssignmentDll.csproj", "{16422A99-5AE0-48D7-AB4C-91D8A363A033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreOrderAssignmentConsole", "EFCoreOrderAssignmentConsole\EFCoreOrderAssignmentConsole.csproj", "{6ADA4649-5FD1-47E5-9D0F-F45142B29A20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{16422A99-5AE0-48D7-AB4C-91D8A363A033}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16422A99-5AE0-48D7-AB4C-91D8A363A033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16422A99-5AE0-48D7-AB4C-91D8A363A033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ADA4649-5FD1-47E5-9D0F-F45142B29A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADA4649-5FD1-47E5-9D0F-F45142B29A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADA4649-5FD1-47E5-9D0F-F45142B29A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADA4649-5FD1-47E5-9D0F-F45142B29A20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
