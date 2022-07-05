@@ -1,0 +1,6 @@
+projectKey=EF-Core-Order-Assignment-Console
+serverUrl=http://localhost:9000
+serverVersion=9.5.0.56709
+dashboardUrl=http://localhost:9000/dashboard?id=EF-Core-Order-Assignment-Console
+ceTaskId=AYGkYDD_rS1tsH4FhWml
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYGkYDD_rS1tsH4FhWml

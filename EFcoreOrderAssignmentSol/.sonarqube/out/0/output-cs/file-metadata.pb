@@ -1,0 +1,11 @@
+f
+]C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\CRUDManagers.csutf-8g
+^C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\DemoDbContext.csutf-8q
+hC:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Entities\CustomerMaster.csutf-8m
+dC:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Entities\ItemMaster.csutf-8Ñ
+{C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Migrations\20220620162050_InitialMigration.csutf-8ê
+ÑC:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Migrations\20220620162050_InitialMigration.Designer.csutf-8Å
+vC:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Migrations\DemoDbContextModelSnapshot.csutf-8ï
+âC:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\obj\Debug\net6.0\EFcoreOrderAssignmentDll.GlobalUsings.g.csutf-8ô
+çC:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8ì
+áC:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\obj\Debug\net6.0\EFcoreOrderAssignmentDll.AssemblyInfo.csutf-8

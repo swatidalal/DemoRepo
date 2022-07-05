@@ -1,0 +1,7 @@
+﻿C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\CRUDManagers.cs
+C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\DemoDbContext.cs
+C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Entities\CustomerMaster.cs
+C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Entities\ItemMaster.cs
+C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Migrations\20220620162050_InitialMigration.cs
+C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Migrations\20220620162050_InitialMigration.Designer.cs
+C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\EFcoreOrderAssignmentDll\Migrations\DemoDbContextModelSnapshot.cs

@@ -34,7 +34,7 @@ namespace EmployeeOrganizationData
         {
             var objEmployee = demoDbContext.Employees.Where(x => x.ID == employeeID).Include(e => e.Organizations).First();
 
-            objEmployee.Name = "Ajeet";
+            objEmployee.Name = "Swati";
 
             // Do not write these 2 lines if you do not want to delete old records.
             objEmployee.Organizations.Clear();

@@ -1,0 +1,1 @@
+C:\Projects\MyProj\DemoRepo\EFcoreOrderAssignmentSol\.sonarqube\out\0

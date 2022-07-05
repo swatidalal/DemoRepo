@@ -147,7 +147,7 @@ public class program
         obj.InsertTeacher(new Teacher { Name = "SWati" });
         obj.InsertClassRoom(new ClassRoom { Name = "Computer Science" });
 
-        //obj.InsertClassRoomAndTeacher(new ClassRoom { Name = "Computer Science" }, new Teacher { Name = "Utkarsh" });
+        obj.InsertClassRoomAndTeacher(new ClassRoom { Name = "Computer Science" }, new Teacher { Name = "Utkarsh" });
 
 
         Console.WriteLine("Done !!!");
